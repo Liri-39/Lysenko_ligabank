@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Лига Банк</title>
+  <link rel="preload" href="/fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+</head>
+<body class="page">
+<header class="page__header page-header">
+  <div class="container page-header__wrapper">
+    <a href="#" class="logo page-header__logo" aria-label="Логотип Лига Банк">
+      <svg width="150" height="27">
+        <use xlink:href="./img/sprite.svg#logo-full"></use>
+      </svg>
+    </a>
+    <nav class="nav-side page-header__nav">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
+      <ul class="nav-side__list">
+        <li class="nav-side__list-item">
+          <a href="#">Услуги</a>
+        </li>
+        <li class="nav-side__list-item">
+          <a href="#">Рассчитать кредит</a>
+        </li>
+        <li class="nav-side__list-item nav-side__list-item--active">
+          <a>Конвертер валют</a>
+        </li>
+        <li class="nav-side__list-item">
+          <a href="#">Контакты</a>
+        </li>
+        <li class="nav-side__list-item">
+          <a href="#">Задать вопрос</a>
+        </li>
+      </ul>
+    </nav>
+    <h2 class="visually-hidden">Вход в Интернет-банк</h2>
+    <ul class="nav-user page-header__nav-user">
+      <li class="nav-user__login">
+        <a href="#">Войти в Интернет-банк</a>
+      </li>
+    </ul>
+  </div>
+</header>
+<main class="page__main page-main">
+  <h1 class="visually-hidden">Лига Банк. Конвертер валют</h1>
+  <section class="slider page-main__slider">
+    <h2 class="visually-hidden">Слайдер</h2>
+    <div class="container slider__container">
+      <picture class="slider__image">
+        <source type="image/webp" srcset="img/banner@1x.webp 1x, img/banner@2x.webp 2x">
+        <img width="1366" height="400" src="img/banner@1x.jpg" srcset="img/banner@1x.jpg 1x, img/banner@2x.jpg 2x"
+             alt="Лига Банк.Кредиты на любой случай">
+      </picture>
+      <div class="slider__wrapper">
+        <p class="slider__title">Лига Банк</p>
+        <p class="slider__description">Кредиты на любой случай</p>
+        <a class="button slider__button" href="#">Рассчитать кредит</a>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <section class="converter page-main__converter">
+      <h2 class="converter__title">Конвертер валют</h2>
+      <form class="form converter__form">
+        <fieldset class="form__item">
+          <legend class="form__item-title">У меня есть</legend>
+          <label class="visually-hidden" for="exchange_sum">Сумма обмена</label>
+          <input class="form__input" type="number" id="exchange_sum" placeholder="Сумма" value="1000"
+                 aria-label="Поле для ввода суммы в валюте">
+          <label class="visually-hidden" for="exchange_val">Тип валюты</label>
+          <select class="form__select" id="exchange_val" aria-label="Тип валюты">
+            <option value="usd">USD</option>
+            <option value="rub" selected>RUB</option>
+            <option value="eur">EUR</option>
+            <option value="gbr">GBR</option>
+            <option value="cny">CNY</option>
+          </select>
+        </fieldset>
+        <fieldset class="form__item">
+          <legend class="form__item-title">Хочу приобрести</legend>
+          <label class="visually-hidden" for="exchange_sum1">Сумма</label>
+          <input class="form__input" type="number" id="exchange_sum1" placeholder="Сумма" value="13.1234">
+          <label class="visually-hidden" for="exchange_val1">Валюта</label>
+          <select class="form__select" id="exchange_val1" aria-label="Тип валюты">
+            <option value="usd" selected>USD</option>
+            <option value="rub">RUB</option>
+            <option value="eur">EUR</option>
+            <option value="gbr">GBR</option>
+            <option value="cny">CNY</option>
+          </select>
+        </fieldset>
+        <label class="visually-hidden" for="exchange_date">Дата обмена</label>
+        <input class="form__input" id="exchange_date" type="date" value="2020-12-01" required>
+        <button class="button form__button">Сохранить результат</button>
+      </form>
+    </section>
+    <section class="history page-main__history">
+      <h3 class="history__title">История конвертация</h3>
+      <ul class="history-list history__list">
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+        <li class="history-list__item">
+          <span class="history-list__item-date">25.11.2020</span>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">1000</span>
+            <span class="history-list__item-currency">RUB</span>
+          </div>
+          <div class="history-list__item-wrapper">
+            <span class="history-list__item-sum">13,1234</span>
+            <span class="history-list__item-currency">USD</span>
+          </div>
+        </li>
+      </ul>
+      <button class="button history__button">Очистить историю</button>
+    </section>
+  </div>
+</main>
+<footer class="page__footer page-footer">
+  <div class="container page-footer__wrapper">
+    <div class="page-footer__info">
+      <h2 class="visually-hidden">Общая информация</h2>
+      <a class="logo page-footer__logo" href="index.html" aria-label="on top link">
+        <svg width="150" height="27">
+          <use xlink:href="./img/sprite.svg#logo-full"></use>
+        </svg>
+      </a>
+      <span class="page-footer__info-item">150015, г. Москва, ул. Московская, д. 32</span>
+      <span class="page-footer__info-item">Генеральная лицензия Банка России №1050</span>
+      <span class="page-footer__info-item">Ⓒ Лига Банк, 2019</span>
+    </div>
+    <h2 class="visually-hidden">Навигация по сайту</h2>
+    <ul class="page-footer__nav">
+      <li class="page-footer__nav-item">
+        <a href="#">Услуги</a>
+      </li>
+      <li class="page-footer__nav-item">
+        <a href="#">Рассчитать кредит</a>
+      </li>
+      <li class="page-footer__nav-item">
+        <a href="#">Контакты</a>
+      </li>
+      <li class="page-footer__nav-item">
+        <a href="#">Задать вопрос</a>
+      </li>
+    </ul>
+    <div class="contact page-footer__contact">
+      <h2 class="visually-hidden">Контактные телефоны</h2>
+      <ul class="contact__list">
+        <li class="contact__item contact__item--mobile">
+          <a class="contact__item-phone contact__item-phone--short" href="tel:0904">*0904</a>
+          <p class="contact__item-desc">Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
+        </li>
+        <li class="contact__item contact__item--phone">
+          <a class="contact__item-phone contact__item-phone--long" href="tel:88001112233">8 800 111 22
+            33</a>
+          <p class="contact__item-desc">Бесплатный для всех городов России</p>
+        </li>
+      </ul>
+    </div>
+    <div class="social page-footer__social">
+      <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+      <ul class="social__nav">
+        <li class="social__nav-item">
+          <a class="social__nav-link" href="#" aria-label="facebook link">
+            <span class="visually-hidden">facebook</span>
+            <svg width="9" height="16">
+              <use xlink:href="./img/sprite.svg#ico-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__nav-item">
+          <a class="social__nav-link" href="#" aria-label="instagram link">
+            <span class="visually-hidden">instagram</span>
+            <svg width="16" height="16">
+              <use xlink:href="./img/sprite.svg#ico-inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__nav-item">
+          <a class="social__nav-link" href="#" aria-label="twitter link">
+            <span class="visually-hidden">twitter</span>
+            <svg width="16" height="13">
+              <use xlink:href="./img/sprite.svg#ico-tw"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__nav-item">
+          <a class="social__nav-link" href="#" aria-label="youtube link">
+            <span class="visually-hidden">youtube</span>
+            <svg width="16" height="13">
+              <use xlink:href="./img/sprite.svg#ico-yt"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

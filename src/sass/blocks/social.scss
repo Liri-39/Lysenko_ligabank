@@ -1,0 +1,20 @@
+.social__nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__nav-item {
+  margin-left: 15px;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 10px $bright-blue);
+  }
+}

@@ -1,0 +1,18 @@
+.page-header {
+  display: flex;
+  align-content: center;
+  height: 91px;
+  background-color: $light-grey;
+}
+
+.page-header__wrapper {
+  padding-left: 98px;
+  padding-right: 98px;
+  margin-bottom: 35px;
+  flex-direction: row;
+}
+
+.page-header__nav {
+  margin-right: auto;
+  margin-left: 58px;
+}

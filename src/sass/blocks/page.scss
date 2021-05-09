@@ -1,0 +1,22 @@
+.page {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include main-font;
+}
+
+.page__header {
+  grid-row: 1;
+}
+
+.page__main {
+  grid-row: 2;
+}
+
+.page__footer {
+  grid-row: 3;
+}

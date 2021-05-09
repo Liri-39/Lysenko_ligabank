@@ -1,0 +1,14 @@
+.button {
+  @include center-x;
+  align-items: center;
+  border-radius: 4px;
+
+  &:focus {
+    outline: 3px solid rgba($grey, 0.5);
+    outline-offset: 1px;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 2px $graphite);
+  }
+}

@@ -1,0 +1,45 @@
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 70px;
+  list-style: none;
+}
+
+.history-list__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 41px;
+  width: 391px;
+  font-size: 18px;
+  line-height: 130%;
+  color: $graphite;
+  margin-bottom: 23px;
+  padding-right: 13px;
+}
+
+.history-list__item-wrapper {
+  display: flex;
+  position: relative;
+
+  &:nth-of-type(1) {
+    margin-right: auto;
+  }
+
+  &:nth-of-type(1)::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 41px;
+    height: 18px;
+    top: 3px;
+    left: 91px;
+    background-image: url("data:image/svg+xml,%3Csvg width='41' height='18' viewBox='0 0 41 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.2 17L40 9L27.2 1' stroke='%231F1E25'/%3E%3Cpath d='M40 9C34.6667 9 15.7407 9 6.66667 9H0' stroke='%231F1E25'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+}
+
+.history-list__item-currency {
+  margin-left: 5px;
+}

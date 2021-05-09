@@ -1,0 +1,42 @@
+.history {
+  position: relative;
+  width: 1170px;
+  background: $light-grey;
+  border-radius: 0 4px 4px 4px;
+  padding-top: 44px;
+  margin-bottom: 110px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 60%;
+    top: 20%;
+    left: 50%;
+    border: 1px solid $medium-grey;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.history__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 140%;
+  padding: 0;
+  margin: 0 0 50px 70px;
+}
+
+.history__button {
+  width: 198px;
+  height: 51px;
+  background: $bright-blue;
+  border: none;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $light-grey;
+  margin-left: 70px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}

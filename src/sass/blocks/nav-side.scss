@@ -1,0 +1,41 @@
+.nav-side {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-side__list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-side__list-item {
+  margin-right: 25px;
+
+  & a {
+    color: $graphite;
+
+    @include main-font;
+  }
+
+  &:focus {
+    outline: 3px solid rgba($light-grey, 0.5);
+    outline-offset: 1px;
+  }
+
+  & a:hover {
+    color: $bright-blue;
+  }
+}
+
+.nav-side__list-item--active {
+  & a {
+    color: $bright-blue;
+  }
+
+  & a:hover {
+    color: $bright-blue;
+  }
+}

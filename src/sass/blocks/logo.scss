@@ -1,0 +1,7 @@
+.logo svg {
+  fill: none;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1px $bright-blue);
+}
